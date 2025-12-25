@@ -1,0 +1,20 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vprofile-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vprofile
+  template:
+    metadata:
+      labels:
+        app: vprofile
+  spec:
+    containers:
+    - name: vprofile
+      image: pavankumar213/vprofile:v1
+      ports:
+      - containerPort: 8080
+
