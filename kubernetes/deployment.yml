@@ -1,4 +1,4 @@
-piVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vprofile-deployment
@@ -11,10 +11,11 @@ spec:
     metadata:
       labels:
         app: vprofile
-  spec:
-    containers:
-    - name: vprofile
-      image: pavankumar213/vprofile:v1
-      ports:
-      - containerPort: 8080
+    spec:
+      containers:
+      - name: vprofile
+        image: pavankumar213/vprofile:v1
+        ports:
+        - containerPort: 8080
+
 
